@@ -59,9 +59,7 @@ class VacantionService implements VacantionInterface
      */
     public function updateVacantion($id, array $data)
     {
-        if (! $vacantion = $this->getVacantion($id)) {
-            return false;
-        }
+        $vacantion = $this->getVacantion($id);
 
         $vacantion->update($data);
 

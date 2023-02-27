@@ -54,6 +54,9 @@ class VacantionControllerTest extends TestCase
                 'end',
                 'price',
             ]));
+
+        $this->getJson(route('vacantion.show', ['vacantion' => 2]))
+            ->assertNotFound();
     }
 
     public function test_create_vacantion()
